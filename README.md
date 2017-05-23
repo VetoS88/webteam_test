@@ -31,3 +31,4 @@
 #### Пояснительная записка.
 - автогенерация поля slug для категории находиться в файле webteam_test/webteam/models.py.
 - view для вывода списка статей категории находится в фале webteam_test/webteam/views.py
+- шаблон webteam_test/webteam/templates/webteam/article_category_list.html (не доделан)
