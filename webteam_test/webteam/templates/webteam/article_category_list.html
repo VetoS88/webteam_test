@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список статей категории</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h2>Список статей категории {{ category }}</h2>
+    </header>
+</div>
+<div class="container">
+    <articles>
+        {% for article in article_list %}
+        <div class="container">
+        <article class="row">
+            {% if article.img %}
+                <img class ="span6" src="{{article.img.url}}" alt="картинка">
+            {% endif %}
+            <p class ="span2" >{{article.name}}</p>
+        </article>
+        </div>
+        {% empty %}
+            <p>в категории {{category}} Нет статей</p>
+        {% endfor %}
+    </articles>
+</div>
+</body>
+</html>
